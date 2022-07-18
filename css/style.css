@@ -70,20 +70,20 @@ a{
 body{
     background-color: var(--clr-background);
     height: 100vh;
-    margin: 0 auto;
+    display: grid;
+    align-items: center;
     font-family: var(--fnt-family-primary);
 }
 
 .card__wrapper{
     background-color: #fff;
     display: flex;
-    border-radius: 10px;
-    overflow: hidden;
     flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden; 
     width: 40%;
-    min-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    transform: translate(0,10%);
 }
 .card__wrapper > *{
     flex: 1;
