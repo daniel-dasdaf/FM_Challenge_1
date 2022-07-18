@@ -1,0 +1,170 @@
+/* === CSS RESET === */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+*{
+    box-sizing: border-box;
+}
+/* === ROOT === */
+:root{
+    --clr-background:hsl(30, 38%, 92%);
+    --clr-neutral:hsl(0, 0%, 100%);
+    --clr-highlight: hsl(158, 36%, 37%);
+    --clr-higlight-active:hsl(156, 42%, 18%);
+    --clr-darkest: hsl(212, 21%, 14%);  
+    --clr-light-dark:hsl(228, 12%, 48%);
+
+    --fnt-family-primary:'Montserrat', sans-serif;
+    --fnt-family-secondary:'Fraunces', serif;
+}
+
+/* === GERAL === */
+body{
+    background-color: var(--clr-background);
+    height: 100vh;
+    margin: 0 auto;
+    font-family: var(--fnt-family-primary);
+}
+
+.card__wrapper{
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+    transform: translate(0,10%);
+}
+.card__wrapper > *{
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+.card__left{
+    width:100%;
+    overflow: hidden;
+}
+.card__left img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.card__right{
+    width:100%;
+    padding: 5%;
+}
+.card__details{
+    padding-bottom: 30px;
+}
+.card__section{
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 14px;
+    color: var(--clr-light-dark);
+}
+.card__title{
+    font-family: var(--fnt-family-secondary);
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 30px 0;
+}
+.card__info{
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--clr-light-dark);
+    line-height: 1.5;
+}
+.card__price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+.price__new{
+    font-family: var(--fnt-family-secondary);
+    font-size: 2.2rem;
+    color: var(--clr-highlight);
+}
+.price__old{
+    text-decoration: line-through;
+    align-items: center;
+    color: var(--clr-light-dark);
+}
+.card__btn{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--clr-highlight);
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: var(--clr-neutral);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+.card__btn:hover{
+    background-color: var(--clr-higlight-active);
+}
+.card__btn img{
+    height: 20px;
+}
+
+@media screen and (max-width: 375px) {
+    .card__wrapper{
+        min-width: 250px;
+        width: 90%;
+    }
+  }
